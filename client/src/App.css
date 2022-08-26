@@ -1,0 +1,15 @@
+*{
+  padding: auto;
+  margin: auto;
+}
+.formin{
+  background-color: antiquewhite;
+  width: 80%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+h2{
+  text-align: center;
+}
