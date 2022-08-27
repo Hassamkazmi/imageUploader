@@ -42,7 +42,7 @@ const createImage = (newImage) => axios.post(url, newImage);
 
   return (
     <div>
-        <h2>Image Uploader</h2>
+        <h1>Image Uploader</h1>
       <div className="formin">
       <form onSubmit={handleSubmit}>
         <input

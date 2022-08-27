@@ -12,19 +12,19 @@ app.use("/uploads", async (req, res, next) => {
   try {
     const newImage = await Post.create(body);
     newImage.save();
-    res.status(201).json({message: "new image uploaded", createdPost: newImage});
+    res.status(201).json({message: "new image uploaded in Database", createdPost: newImage});
   } catch (error) {
     res.status(409).json({
       message: error.message,
     });
   }
 });
-
+//Connection
  mongoose.connect('mongodb://localhost:27017', { useUnifiedTopology: true ,  useNewUrlParser: true})
 .then(console.log('database connected'))
 .catch(err => err)
 
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log("listening at port " + PORT);
+  console.log("listening on a port  " + PORT);
 });
